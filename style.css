@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid red;
+  height: 4rem;
+  margin-top: 1.5rem;
+}
+
+.weatherContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border: 1px solid blue;
+  width: 100%;
+  min-height: 90vh;
+}
+ 
+.weatherCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 20rem;
+    height: 30rem;
+}
