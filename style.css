@@ -32,7 +32,7 @@ header {
   height: 20rem;
   margin-top: 5rem;
 }
-.forcastCard {
+.forecastCard {
   width: 100%;
   height: 15rem;
   display: flex;
@@ -40,7 +40,7 @@ header {
   border: 1px solid black;
   margin-top: 3rem;
 }
-.forcastRow {
+.forecastRow {
   display: flex;
   flex-direction: column;
   align-items: center;
