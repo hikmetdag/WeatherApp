@@ -10,11 +10,11 @@ export const weatherVisual=(data)=>{
 <p class="currentState">${data.weather[0].main}</p>
 
 <div class="temp">
-   Temperature: <span class="num">${Math.floor(data.main.temp)}</span>
-    <span class="unit">°C</span>
-</div>
+<i class='fa-solid fa-temperature-full'></i><span class="num">${Math.floor(data.main.temp)}</span>
+     <span class="unit">°C</span>
+ </div>
 
-<p  class="humidity"></i> Humidity:${data.main.humidity}%</p>
-<p  class="wind"> Wind:${data.wind.speed} m/s</p>
-`
-}
+ <p  class="humidity"><i class="fa fa-tint" style="font-size:24px;color:blue"></i>${data.main.humidity}%</p>
+ <p  class="wind"> <i class='fas fa-wind' style='font-size:24px'></i>${data.wind.speed} m/s</p>
+
+ `}

@@ -9,7 +9,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   border: 1px solid red;
-  height: 4rem;
+  min-height: 4rem;
   margin-top: 1.5rem;
 }
 
@@ -34,11 +34,12 @@ header {
 }
 .forecastCard {
   width: 100%;
-  height: 15rem;
+  min-height: 15rem;
   display: flex;
   flex-direction: row;
   border: 1px solid black;
   margin-top: 3rem;
+  
 }
 .forecastRow {
   display: flex;
@@ -47,5 +48,22 @@ header {
   justify-content: center;
   border: 1px solid red;
   margin: 0.5rem;
-  overflow: hidden;
+  flex: 1;
+  
+  
 }
+ @media only screen and (max-width:730px){
+    .forecastCard{
+        justify-content: start;
+        /* align-items: none; */
+        overflow-y: scroll;
+    }
+header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchField{
+    margin: 1rem;
+}
+ }
