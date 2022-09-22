@@ -17,7 +17,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   border: 1px solid blue;
   width: 100%;
   min-height: 90vh;
@@ -25,45 +24,105 @@ header {
 
 .weatherCard {
   display: flex;
+  border-radius: 1rem;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  width: 15rem;
-  height: 20rem;
-  margin-top: 5rem;
+  /* border: 1px solid black; */
+  width: 20rem;
+  height: 25rem;
+  margin-top: 1rem;
+  overflow: unset;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .forecastCard {
   width: 100%;
   min-height: 15rem;
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
-  margin-top: 3rem;
-  
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 .forecastRow {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
   margin: 0.5rem;
   flex: 1;
-  
-  
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
- @media only screen and (max-width:730px){
-    .forecastCard{
-        justify-content: start;
-        /* align-items: none; */
-        overflow-y: scroll;
-    }
-header{
+
+.hwDeg {
+  display: flex;
+  flex-direction: row;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 7rem;
+  width: 5rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.temp {
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+.tempforecast {
+  text-align: center;
+  width: 6rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.currentState {
+  text-align: center;
+  width: 5rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.location {
+  text-align: center;
+  width: 10rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+@media only screen and (max-width: 730px) {
+  .forecastCard {
+    justify-content: start;
+    /* align-items: none; */
+    overflow-y: scroll;
+  }
+  header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.searchField{
+  }
+  .searchField {
     margin: 1rem;
+  }
 }
- }

@@ -20,7 +20,6 @@ function dataWeatherByLocation() {
         navigator.geolocation.getCurrentPosition(async position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`
             const response = await fetch(url)
             const data = await response.json()
@@ -37,7 +36,6 @@ function forecastWeatherByLocation() {
         navigator.geolocation.getCurrentPosition(async position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-
             const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`
             const response = await fetch(url)
             const data = await response.json()

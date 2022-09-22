@@ -8,7 +8,7 @@ export const forecastWeather = (data) => {
     <div class='forecastRow'>
         <h1>${getDayName(item)}</h1>
         <img src='http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png' alt="weather img">
-        <div class="temp">
+        <div class="tempForecast">
             <span class="num">${Math.floor(item.main.temp)}</span>
             <span class="unit">°C</span>
         </div>
