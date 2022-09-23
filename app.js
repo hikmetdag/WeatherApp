@@ -1,6 +1,7 @@
 import { weatherVisual } from './weatherView.js'
 import { forecastWeather } from './forecastView.js'
 import { getDate } from './date.js'
+import { unsplashApi } from './unsplashApi.js'
 
 const input = document.querySelector('#inputField')
 getDate()
@@ -10,6 +11,7 @@ async function dataTodayWeather(city) {
     const response = await fetch(url)
     const data = await response.json()
     weatherVisual(data)
+    unsplashApi(city)
 }
 
 function dataWeatherByLocation() {
@@ -24,6 +26,7 @@ function dataWeatherByLocation() {
             const response = await fetch(url)
             const data = await response.json()
             weatherVisual(data)
+            unsplashApi(data.name)
         })
     }
 }
