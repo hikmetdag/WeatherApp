@@ -2,16 +2,20 @@ import { weatherVisual } from './weatherView.js'
 import { forecastWeather } from './forecastView.js'
 import { getDate } from './date.js'
 import { unsplashApi } from './unsplashApi.js'
+import { createHtmlElement } from './createHtmlElement.js'
 
-const input = document.querySelector('#inputField')
-getDate()
 async function dataTodayWeather(city) {
     const apiKey = '36d04473986fb046e2b40f91d26657b7'
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     const response = await fetch(url)
-    const data = await response.json()
-    weatherVisual(data)
-    unsplashApi(city)
+    if (response.ok) {
+        const data = await response.json()
+        weatherVisual(data)
+        unsplashApi(city)
+    } else {
+        throw new Error('Something goes wrong with Data Server!')
+    }
+
 }
 
 function dataWeatherByLocation() {
@@ -24,9 +28,14 @@ function dataWeatherByLocation() {
             lat = position.coords.latitude;
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`
             const response = await fetch(url)
-            const data = await response.json()
-            weatherVisual(data)
-            unsplashApi(data.name)
+            if (response.ok) {
+                const data = await response.json()
+                weatherVisual(data)
+                unsplashApi(data.name)
+            } else {
+                throw new Error('Something goes wrong with Data Server!')
+            }
+
         })
     }
 }
@@ -57,17 +66,30 @@ async function dataForecastWeather(city) {
     forecastWeather(forecastData)
 }
 
+function main() {
+    createHtmlElement()
+    getDate()
+    const input = document.querySelector('.input-search')
+    const button = document.querySelector('.btn-search')
 
-input.addEventListener('keyup', e => {
-    if (e.key == 'Enter' && input.value != '') {
+    input.addEventListener('keyup', e => {
+        if (e.key == 'Enter' && input.value != '') {
+            dataTodayWeather(input.value)
+            dataForecastWeather(input.value)
+        }
+    })
+
+    button.addEventListener('click', () => {
         dataTodayWeather(input.value)
         dataForecastWeather(input.value)
-    }
-})
+    })
 
-window.addEventListener('load', () => {
-    dataWeatherByLocation()
-    forecastWeatherByLocation()
+    window.addEventListener('load', () => {
+        dataWeatherByLocation()
+        forecastWeatherByLocation()
 
-})
+    })
 
+}
+
+main()
