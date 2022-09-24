@@ -9,8 +9,8 @@ export const weatherVisual = (data) => {
         <span class="unit">°C</span>
     </div>
     <p class="currentState">${data.weather[0].main}</p>
-    <div class='imgBox'> <img class="weatherIcon" src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' alt="weather img"
-            width="100" height="100">
+    <div class='imgBox'> <img class="weatherIcon" src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'
+            alt="weather img" width="100" height="100">
     </div>
     <div class='hwDeg'>
         <div class='humidity'>

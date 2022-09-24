@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
   min-height: 100v;
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   clear: both;
@@ -31,7 +32,7 @@ header {
 }
 
 .weatherCard {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   border-radius: 1rem;
   flex-direction: column;
@@ -74,6 +75,7 @@ header {
 
 .humidity,
 .wind {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +103,7 @@ header {
 }
 
 .currentState {
+  background-color: white;
   text-align: center;
   width: 5rem;
   font-size: 1.2rem;
@@ -111,6 +114,7 @@ header {
 }
 
 .location {
+  background-color: white;
   text-align: center;
   width: 10rem;
   font-size: 1.2rem;
@@ -183,6 +187,11 @@ i {
   margin: 0.3rem;
   border-radius: 0.4rem;
 }
+#error {
+  color: red;
+  text-align: center;
+}
+
 @media only screen and (max-width: 730px) {
   .forecastCard {
     justify-content: start;
