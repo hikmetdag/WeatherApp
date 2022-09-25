@@ -32,7 +32,7 @@ header {
 }
 
 .weatherCard {
-  background-color: transparent;
+  background-color: white;
   display: flex;
   border-radius: 1rem;
   flex-direction: column;
@@ -48,7 +48,7 @@ header {
 }
 .forecastCard {
   width: 100%;
-  min-height: 15rem;
+  height: 15rem;
   display: flex;
   flex-direction: row;
   margin-top: 1.5rem;
@@ -166,6 +166,7 @@ i {
   background-color: white;
   justify-content: space-evenly;
   border-radius: 0.5rem;
+  align-items: center;
 }
 .date {
   display: flex;
@@ -177,13 +178,13 @@ i {
   align-items: center;
   border-radius: 0.5rem;
 }
-.imgBox{
+.imgBox {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 6rem;
   height: 4rem;
-  background-color:#80BDE3;
+  background-color: #80bde3;
   margin: 0.3rem;
   border-radius: 0.4rem;
 }
@@ -197,13 +198,85 @@ i {
     justify-content: start;
     align-items: none;
     overflow-y: scroll;
+    height: 12rem;
   }
   header {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1rem;
   }
   .search-box {
+    margin: 0.6rem;
+  }
+  .forecastCard {
+  }
+  .futureday {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .search-box {
+    margin: 0.8rem;
+  }
+  .weatherCard {
+    width: 15rem;
+    height: 20rem;
+    margin-top: 0.7rem;
+    padding: 0.6rem;
+  }
+
+  .forecastRow {
     margin: 0.5rem;
+  }
+  .humidity,
+  .wind {
+    height: 5rem;
+    width: 3.8rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
+  }
+
+  .temp {
+    font-size: 3.8rem;
+    margin-top: 1rem;
+  }
+  .tempforecast {
+    width: 4rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .input-search {
+    width: 9rem;
+    height: 1.8rem;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+  }
+  i {
+    font-size: 0.8rem;
+  }
+  .btn-search {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 1.8rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .appName {
+    width: 9rem;
+    height: 1.8rem;
+    font-size: 0.6rem;
+    margin-top: 1.5rem;
+  }
+  .date {
+    width: 9rem;
+    height: 1.8rem;
+  }
+  .imgBox {
+    width: 5rem;
+    height: 3.5rem;
+    margin: 0.3rem;
+    border-radius: 0.4rem;
   }
 }

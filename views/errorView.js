@@ -1,6 +1,7 @@
-export const renderError = (err) => {
-    const weatherContainer=document.querySelector('.weatherContainer')
-    weatherContainer.innerHTML = "";
-    weatherContainer.innerHTML = `<h1 id='error'>Error 404, a problem with data server</h1>`;
-    weatherContainer.style.background = "white !important";
+export const renderError = (err,message) => {
+    const weatherCard=document.querySelector('.weatherCard')
+    weatherCard.innerHTML = "";
+    weatherCard.innerHTML = `<h3 id='error'>${err.message}<hr> Please typed the city name correctly...</h3>`;
+    const forecastCard = document.querySelector('.forecastCard')
+    forecastCard.innerHTML = ''
   };

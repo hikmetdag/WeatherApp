@@ -6,7 +6,7 @@ export const forecastWeather = (data) => {
     data.forEach(item => {
         let x = String.raw`
     <div class='forecastRow'>
-        <h1>${getDayName(item)}</h1>
+        <h1 class='futureDay'>${getDayName(item)}</h1>
         <div class='imgBox'>
         <img src='http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png' alt="weather img">
         </div>
