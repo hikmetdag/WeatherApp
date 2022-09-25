@@ -24,3 +24,4 @@ The following are the languages or tools I used to build the app:
 - Html and Css
 - JavaScript(ES6+)
 - [Open Weather API](http://api.openweathermap.org)
+- [Unsplash API](https://unsplash.com/developers)
