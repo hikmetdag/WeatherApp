@@ -15,7 +15,7 @@ You can view the working demo here: [https://hikmetdag.github.io/WeatherApp/](ht
 - It can show weather by Geolocation
 - It shows weather by entering the city name
 - Show 5 day weather forecast of the city or geolocation
-- It arranges background img according to given city
+- It arranges background img of given city
 
 ## Tools/Languages
 
