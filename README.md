@@ -1,2 +1,2 @@
 # WeatherApp
-![ScreenShot](https://imgur.com/a/SATmFXJ)
+![ScreenShot](/public/Screenshot%20.png)
