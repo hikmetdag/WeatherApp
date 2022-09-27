@@ -78,7 +78,7 @@ async function dataForecastWeather(city) {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
         const response = await fetch(url)
         if (!response.ok) {
-            throw new Error('Invalid city name')
+            throw new Error('Invalid city name.')
         }
         const data = await response.json()
         const forecastData = await data.list.filter(element => element.dt_txt.endsWith('06:00:00'))
