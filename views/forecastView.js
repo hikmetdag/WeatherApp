@@ -1,4 +1,4 @@
-import { getDayName} from '../../utils/getDayName.js'
+import { getDayName} from '../../utils/getDayNamePage.js'
 
 export const forecastWeather = (data) => {
     const forecastCard = document.querySelector('.forecastCard')

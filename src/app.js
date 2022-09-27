@@ -4,7 +4,7 @@ import { getDate } from '../views/date.js'
 import { unsplashApi } from './unsplashApi.js'
 import { createHtmlElement } from '../views/createHtmlElement.js'
 import { renderError } from '../views/errorView.js'
-import { getDayName } from '../utils/getDayName.js'
+import { getDayName } from '../utils/getDayNamePage.js'
 
 async function dataTodayWeather(city) {
     try {
