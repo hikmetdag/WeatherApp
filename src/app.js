@@ -1,6 +1,6 @@
 import { weatherVisual } from '../views/weatherView.js'
 import { forecastWeather } from '../views/forecastView.js'
-import { getDate } from '../views/date.js'
+import { getDate } from '../views/dateHeaderView.js'
 import { unsplashApi } from './unsplashApi.js'
 import { createHtmlElement } from '../views/createHtmlElement.js'
 import { renderError } from '../views/errorView.js'
