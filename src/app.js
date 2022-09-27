@@ -1,6 +1,6 @@
 import { weatherVisual } from '../views/weatherView.js'
 import { forecastWeather } from '../views/forecastView.js'
-import { getDate } from './date.js'
+import { getDate } from '../views/date.js'
 import { unsplashApi } from './unsplashApi.js'
 import { createHtmlElement } from '../views/createHtmlElement.js'
 import { renderError } from '../views/errorView.js'
@@ -10,8 +10,9 @@ async function dataTodayWeather(city) {
         const apiKey = '36d04473986fb046e2b40f91d26657b7'
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
         const response = await fetch(url)
-        if (response.status === 404)
+        if (!response.ok) {
             throw new Error('Invalid city name')
+        }
         const data = await response.json()
         weatherVisual(data)
         unsplashApi(city)
@@ -76,7 +77,7 @@ async function dataForecastWeather(city) {
         const apiKey = '36d04473986fb046e2b40f91d26657b7'
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
         const response = await fetch(url)
-        if (response.status === 404) {
+        if (!response.ok) {
             throw new Error('Invalid city name')
         }
         const data = await response.json()

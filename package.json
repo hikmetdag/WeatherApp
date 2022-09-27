@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "This app display weather data and 5 day forecast from any city in the world using the [OpenWeatherMap](http://www.openweathermap.org/) API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hikmetdag/WeatherApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hikmetdag/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/hikmetdag/WeatherApp#readme"
+}
